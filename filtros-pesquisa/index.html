@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  ng-app="aplicacao">
+<head>
+	<title>AngularJS-1.X-Exemplos - Filtros - Pesquisa</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="PesquisaCtrl">
+
+<input type="text" ng-model="filtro" placeholder="Digite algo" />
+
+<table>
+	<tr>
+		<td><strong>Nome</strong></td>
+		<td><strong>Profissão</strong></td>
+	</tr>
+	<tr ng-repeat="dado in dados | filter:filtro">
+		<td>{{dado.nome}}</td>
+		<td>{{dado.profissao}}</td>
+	</tr>
+<table>
+</body>
+</html>
